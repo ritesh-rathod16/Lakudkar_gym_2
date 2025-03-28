@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakudkar Gym - Transform Your Fitness Journey</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 48px;
+        }
+        
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #ff6b6b;
+            margin: 15px auto;
+        }
+        
+        h3 {
+            font-size: 24px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: auto;
+            margin-right: 15px;
+        }
+        
+        .logo-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6b6b;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #ff6b6b;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/f5/51/48/f55148ad2ef92de8597008b60bcd29a8.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .hero-btns .btn {
+            font-size: 16px;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #333;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+        
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content {
+            flex: 1;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f9f9f9;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .service-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Plans Section */
+        .plans {
+            background-color: white;
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .plan-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .plan-card.popular {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        
+        .plan-card.popular .btn {
+            background-color: white;
+            color: #ff6b6b;
+        }
+        
+        .plan-card.popular .btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 5px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .plan-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .plan-price {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Diet Section */
+        .diet {
+            background-color: #f9f9f9;
+        }
+        
+        .diet-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .diet-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .diet-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .diet-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .diet-content {
+            flex: 1;
+        }
+        
+        .diet-plan {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .day-plan {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .day-plan:last-child {
+            border-bottom: none;
+        }
+        
+        /* Workout Section */
+        .workout {
+            background-color: white;
+        }
+        
+        .workout-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .workout-content {
+            flex: 1;
+        }
+        
+        .workout-img {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .workout-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .workout-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .workout-day {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .workout-exercises {
+            list-style: none;
+        }
+        
+        .workout-exercises li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Location Section */
+        .location {
+            background-color: #f9f9f9;
+        }
+        
+        .location-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .map-container {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        .location-info {
+            flex: 1;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-table td {
+            padding: 12px 0;
+        }
+        
+        .hours-table td:last-child {
+            font-weight: bold;
+            text-align: right;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #ff6b6b;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            color: #ff6b6b;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        
+        .info-content h3 {
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        
+        .info-content p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .footer-logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff6b6b;
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #ff6b6b;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b6b;
+            padding-left: 5px;
+        }
+        
+        .footer-newsletter p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 14px;
+        }
+        
+        .newsletter-form button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: #ff5252;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-container,
+            .diet-container,
+            .workout-container,
+            .location-container,
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .about-img,
+            .about-content,
+            .diet-img,
+            .diet-content,
+            .workout-img,
+            .workout-content,
+            .map-container,
+            .location-info,
+            .contact-form,
+            .contact-info {
+                flex: none;
+                width: 100%;
+            }
+            
+            .about-img,
+            .diet-img,
+            .workout-img {
+                margin-bottom: 30px;
+            }
+            
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            h2 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 28px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .plans-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://media-hosting.imagekit.io/c1ab74a3f47f431f/gym%20logo.jpg" alt="Lakudkar Gym Logo" class="logo-img">
+                <span class="logo-text">Lakudkar Gym</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#membership">Membership Plans</a></li>
+                    <li><a href="https://www.google.co.in/maps/place/Lakudkar's+Fitness+Gym/@21.0796742,79.0741384,835m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bd4bf1b58fb6519:0x6cbe7ba3e9ac2854!8m2!3d21.0796742!4d79.0767133!16s%2Fg%2F11hbsn7l0b?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">Location</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Fitness Journey Today!</h1>
+                <p>Personalized Training • Expert Coaches • Results Guaranteed</p>
+                <div class="hero-btns">
+                    <a href="#membership" class="btn">Join Now</a>
+                    <a href="#contact" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Why Choose Lakudkar Gym?</h2>
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="https://i.pinimg.com/736x/de/8f/57/de8f579651b2e0a6cddbd359182f95ad.jpg" alt="Gym Interior">
+                </div>
+                <div class="about-content">
+                    <p>At Lakudkar Gym, we're committed to helping you achieve your fitness goals with state-of-the-art equipment, expert trainers, and a supportive community.</p>
+                    <p>Our facility offers a wide range of training options to suit all fitness levels, from beginners to professional athletes.</p>
+                    <p>Whether you're looking to build muscle, lose weight, or improve your overall health, we have the programs and expertise to help you succeed.</p>
+                    <a href="#membership" class="btn" style="margin-top: 20px;">View Our Plans</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.pinimg.com/736x/f7/b0/5d/f7b05d5bb3f523a73aa01efeed5be53d.jpg" alt="Gym Training">
+                    </div>
+                    <div class="service-content">
+                        <h3>Gym Membership</h3>
+                        <p>Access to all our premium equipment and facilities with expert guidance from our certified trainers.</p>
+                        <a href="#membership" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.pinimg.com/736x/f5/51/48/f55148ad2ef92de8597008b60bcd29a8.jpg" alt="Dance Classes">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dance/Zumba Classes</h3>
+                        <p>Fun, energetic dance workouts that burn calories and boost your mood in a party-like atmosphere.</p>
+                        <a href="#dance" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://i.pinimg.com/736x/f4/81/51/f48151613d6c1b329c50e38ea78693f0.jpg" alt="Calisthenics">
+                    </div>
+                    <div class="service-content">
+                        <h3>Calisthenics Training</h3>
+                        <p>Master your bodyweight with our progressive calisthenics program for strength and mobility.</p>
+                        <a href="#calisthenics" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+    <section class="plans" id="membership">
+        <div class="container">
+            <h2>Membership Plans</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Basic</h3>
+                    <div class="plan-price">₹1,000<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Gym Access</li>
+                        <li>Basic Equipment</li>
+                        <li>Locker Facility</li>
+                        <li>Open 6AM-10PM</li>
+                    </ul>
+                    <a href="#contact" class="btn">Join Now</a>
+                </div>
+                <div class="plan-card popular">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="plan-price">₹1,500<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Full Gym Access</li>
+                        <li>All Equipment</li>
+                        <li>Personalized Workout Plan</li>
+                        <li>Nutrition Consultation</li>
+                        <li>24/7 Access</li>
+                    </ul>
+                    <a href="#contact" class="btn">Join Now</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Ultimate</h3>
+                    <div class="plan-price">₹2,500<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>All Premium Features</li>
+                        <li>Personal Trainer Sessions</li>
+                        <li>Body Composition Analysis</li>
+                        <li>Custom Meal Plan</li>
+                        <li>Priority Booking</li>
+                    </ul>
+                    <a href="#contact" class="btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Package Details -->
+    <section class="diet" id="gym">
+        <div class="container">
+            <h2>Gym Membership Package</h2>
+            <div class="diet-container">
+                <div class="diet-img">
+                    <img src="https://i.pinimg.com/474x/7a/1f/02/7a1f0261de4715fd78874ac0d42d55b1.jpg" alt="Gym Workout">
+                </div>
+                <div class="diet-content">
+                    <h3>What's Included:</h3>
+                    <p>✅ <strong>STRENGTH TRAINING</strong><br>
+                    Build muscle with free weights & machines<br>
+                    Progressive overload programs</p>
+                    
+                    <p>✅ <strong>FUNCTIONAL & CROSSFIT TRAINING</strong><br>
+                    HIIT workouts<br>
+                    Battle ropes, kettlebells, plyometrics</p>
+                    
+                    <p>✅ <strong>CUSTOMIZED WORKOUT PLANNING & MONITORING</strong><br>
+                    Personalized routines<br>
+                    Monthly progress tracking</p>
+                    
+                    <p>✅ <strong>CUSTOMIZED DIET & NUTRITION CONSULTATION</strong><br>
+                    Tailored meal plans<br>
+                    Macro calculations</p>
+                    
+                    <p><strong>💰 Pricing:</strong><br>
+                    💲 1,500/- MONTHLY<br>
+                    🔥 Best value for comprehensive fitness support!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dance Package Details -->
+    <section class="workout" id="dance">
+        <div class="container">
+            <h2>Dance/Zumba Class Package</h2>
+            <div class="workout-container">
+                <div class="workout-content">
+                    <p>🌟 <strong>Dance Class / Zumba Class Package</strong> 🌟</p>
+                    
+                    <p>🕺 <strong>No experience needed</strong> – Beginners welcome!<br>
+                    🌍 <strong>Learn global dance styles</strong> – From Bollywood to Hip-Hop!<br>
+                    💃 <strong>Feel the rhythm</strong> – Groove to upbeat music!<br>
+                    💪 <strong>Full-body workout</strong> – Burn calories while having fun!<br>
+                    😊 <strong>Instant mood booster</strong> – Dance your stress away!<br>
+                    👯 <strong>Meet dance lovers</strong> – Join a friendly community!<br>
+                    👥 <strong>Group energy</strong> – Motivating & social sessions!<br>
+                    🎉 <strong>Party-like vibe</strong> – Every class feels like a celebration!</p>
+                    
+                    <p>💰 <strong>Only 1500/- MONTHLY!</strong></p>
+                    
+                    <p>✨ <strong>Why Choose This Class?</strong><br>
+                    ✅ All fitness levels welcome<br>
+                    ✅ Non-stop fun & movement<br>
+                    ✅ Great for weight loss & stamina</p>
+                    
+                    <p>🎶 <strong>Let's dance together!</strong> DM to enroll. 💃🔥</p>
+                </div>
+                <div class="workout-img">
+                    <img src="https://i.pinimg.com/736x/f5/51/48/f55148ad2ef92de8597008b60bcd29a8.jpg" alt="Dance Class">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calisthenics Package Details -->
+    <section class="diet" id="calisthenics">
+        <div class="container">
+            <h2>Calisthenics Training</h2>
+            <div class="diet-container">
+                <div class="diet-img">
+                    <img src="https://i.pinimg.com/736x/f4/81/51/f48151613d6c1b329c50e38ea78693f0.jpg" alt="Calisthenics">
+                </div>
+                <div class="diet-content">
+                    <h3>Package Includes:</h3>
+                    <p>💪 <strong>Calisthenics Training</strong> – Transform Your Body with Bodyweight Mastery!<br>
+                    🔥 <strong>No Gym? No Problem!</strong> Build strength, flexibility, and endurance using only your bodyweight!</p>
+                    
+                    <h3>✅ What You'll Get:</h3>
+                    <p>✔ <strong>Full-Body Strength</strong> – Push-ups, Pull-ups, Dips & Muscle-Ups<br>
+                    ✔ <strong>Core & Mobility</strong> – Planks, Leg Raises, Handstands<br>
+                    ✔ <strong>Explosive Power</strong> – Plyometrics & Dynamic Movements<br>
+                    ✔ <strong>Lean Muscle Gain</strong> – No weights, pure functional fitness<br>
+                    ✔ <strong>Progressive Training</strong> – From beginner to advanced levels</p>
+                    
+                    <h3>🌟 Why Choose Our Calisthenics Classes?</h3>
+                    <p>✅ Suitable for all levels (Beginner to Athlete)<br>
+                    ✅ Improves posture & athleticism<br>
+                    ✅ Builds functional strength for real-life movements<br>
+                    ✅ Outdoor/Indoor sessions – Train anywhere!</p>
+                    
+                    <h3>📅 Class Features:</h3>
+                    <p>👥 Small Group Coaching (Personalized attention)<br>
+                    ⏳ Flexible Timing (Morning/Evening batches)<br>
+                    🎯 Skill-Based Progression (Master step-by-step)</p>
+                    
+                    <h3>💰 Pricing:</h3>
+                    <p>1 Month: ₹1500/-<br>
+                    3 Months: ₹4000/- (Save ₹500!)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diet Plan Section -->
+    <section class="diet">
+        <div class="container">
+            <h2>Diet Plan</h2>
+            <div class="diet-container">
+                <div class="diet-img">
+                    <img src="https://i.pinimg.com/474x/6c/e3/b2/6ce3b2be792cdd262d3bc338f4268687.jpg" alt="Healthy Food">
+                </div>
+                <div class="diet-content">
+                    <h3>📊 Daily Macros (Indian Foods)</h3>
+                    <p>💪 <strong>Protein:</strong> 1.6-2.2g/kg (Eggs 🥚, Chicken 🍗, Paneer 🧀, Dal 🌱)</p>
+                    <p>⚡ <strong>Carbs:</strong> 3-5g/kg (Brown Rice 🍚, Roti 🫓, Oats 🥣)</p>
+                    <p>🫒 <strong>Fats:</strong> 0.8-1g/kg (Ghee 🧈, Nuts 🥜, Coconut 🥥)</p>
+                    <p>💧 <strong>Hydration:</strong> 3-4L water + Nimbu Pani 🍋 or Coconut Water 🥥</p>
+                    
+                    <div class="diet-plan">
+                        <h3>📅 7-Day Plan</h3>
+                        
+                        <div class="day-plan">
+                            <h4>Day 1 🏋️‍♂️ (Strength Training - High Protein)</h4>
+                            <p>🌅 Pre-Workout: Banana 🍌 + Peanut Butter 🥜 + Milk 🥛</p>
+                            <p>🏋️‍♂️ Post-Workout: Roti 🫓 + Chicken Curry 🍗 + Dal 🌱 + Cucumber Salad 🥒</p>
+                            <p>☕ Snack: Sprout Chaat 🌱 + Almonds 🥜</p>
+                            <p>🌙 Dinner: Brown Rice 🍚 + Fish Curry 🐟 + Bhindi Sabzi 🥗</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 2 🏃‍♂️ (HIIT - Moderate Carb)</h4>
+                            <p>🌅 Pre-Workout: Poha 🍚 + Boiled Egg 🥚</p>
+                            <p>🏃‍♂️ Post-Workout: Quinoa 🍛 + Moong Dal 🌱 + Curd 🥄</p>
+                            <p>☕ Snack: Greek Yogurt 🥣 + Chia Seeds ✨</p>
+                            <p>🌙 Dinner: Jowar Roti 🫓 + Palak Paneer 🧀 + Sprouts 🌱</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 3 🦵 (Leg Day - High Energy)</h4>
+                            <p>🌅 Pre-Workout: Oats 🥣 + Whey 💊 + Dates 🍇</p>
+                            <p>🦵 Post-Workout: Rice 🍚 + Mutton Curry 🍖 + Beetroot Salad 🥗</p>
+                            <p>☕ Snack: Chana Chaat 🌱 + Green Chutney 🍃</p>
+                            <p>🌙 Dinner: Bajra Roti 🫓 + Dal Tadka 🌱 + Mushrooms 🍄</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 4 💪 (Upper Body - Balanced)</h4>
+                            <p>🌅 Pre-Workout: Upma 🍛 + Buttermilk 🥛</p>
+                            <p>💪 Post-Workout: Roti 🫓 + Egg Bhurji 🍳 + Curd 🥄</p>
+                            <p>☕ Snack: Makhana 🍿 + Ghee 🧈</p>
+                            <p>🌙 Dinner: Khichdi 🍚 + Kadhi 🥣</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 5 🚴 (Endurance - Carb Cycling)</h4>
+                            <p>🌅 Pre-Workout: Idli 🍘 + Sambar 🍛</p>
+                            <p>🚴 Post-Workout: Brown Rice 🍚 + Grilled Fish 🐟 + Lauki Sabzi 🥗</p>
+                            <p>☕ Snack: Fruit Salad 🍉 + Walnuts 🥜</p>
+                            <p>🌙 Dinner: Missi Roti 🫓 + Dal 🌱 + Bhindi Sabzi 🥗</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 6 🧘 (Active Recovery - Low Carb)</h4>
+                            <p>🌅 Breakfast: Egg Whites 🥚 + Spinach Omelet 🍳</p>
+                            <p>🍽️ Lunch: Quinoa 🍛 + Chana Masala 🌱 + Cucumber Raita 🥒</p>
+                            <p>☕ Snack: Coconut Water 🥥 + Pumpkin Seeds 🎃</p>
+                            <p>🌙 Dinner: Tofu 🧈 + Mushroom Soup 🍄</p>
+                        </div>
+                        
+                        <div class="day-plan">
+                            <h4>Day 7 🛌 (Rest Day - Flexible)</h4>
+                            <p>🍳 Brunch: Dosa 🍘 + Sambar 🍛 + Flaxseed Chutney ✨</p>
+                            <p>☕ Snack: Lassi 🥛 + Sunflower Seeds 🌻</p>
+                            <p><em>Muscle Gain 💪: Add ghee 🧈 or extra eggs 🥚.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workout Routine Section -->
+    <section class="workout">
+        <div class="container">
+            <h2>Workout Routine</h2>
+            
+            <div class="workout-container">
+                <div class="workout-content">
+                    <h3>🏋️‍♂️ 6-Day Gym Workout Split</h3>
+                    <p><strong>Goal:</strong> Build muscle 💪, strength 🔥 & endurance 🏃‍♂️<br>
+                    <strong>Rest Day:</strong> Sunday 🧘 (active recovery: yoga/walking)</p>
+                    
+                    <div class="workout-day">
+                        <h4>Day 1️⃣ (Monday): Chest & Triceps</h4>
+                        <ul class="workout-exercises">
+                            <li>Flat Bench Press – 4x6-8 🏋️‍♂️</li>
+                            <li>Incline Dumbbell Press – 3x8-10 🏋️‍♀️</li>
+                            <li>Cable Flys – 3x12 ✨</li>
+                            <li>Triceps Dips – 3xMAX 💪</li>
+                            <li>Skull Crushers – 3x10-12 🦾</li>
+                            <li><em>(Finish: 10 min incline treadmill walk 🚶‍♂️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 2️⃣ (Tuesday): Back & Biceps</h4>
+                        <ul class="workout-exercises">
+                            <li>Pull-Ups – 4x6-8 (add weight if advanced) 🏋️‍♂️</li>
+                            <li>Barbell Rows – 3x8-10 🏋️‍♀️</li>
+                            <li>Lat Pulldown – 3x10-12 🔄</li>
+                            <li>Deadlifts – 3x5 (heavy!) ⚡</li>
+                            <li>Hammer Curls – 3x12 💥</li>
+                            <li><em>(Stretch: 5 min lats/biceps 🧘)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 3️⃣ (Wednesday): Legs (Quads Focus)</h4>
+                        <ul class="workout-exercises">
+                            <li>Squats – 4x6-8 🦵</li>
+                            <li>Bulgarian Split Squats – 3x8/leg 🏋️‍♀️</li>
+                            <li>Leg Press – 3x10-12 🚂</li>
+                            <li>Leg Extensions – 3x15 (slow!) 🐢</li>
+                            <li>Calf Raises – 4x15 👟</li>
+                            <li><em>(Cool down: 5 min bike 🚴‍♂️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 4️⃣ (Thursday): Shoulders & Abs</h4>
+                        <ul class="workout-exercises">
+                            <li>Overhead Press – 4x6-8 🏋️‍♂️</li>
+                            <li>Lateral Raises – 3x12-15 ✈️</li>
+                            <li>Face Pulls – 3x15 🔄</li>
+                            <li>Hanging Leg Raises – 3x12-15 🦵</li>
+                            <li>Russian Twists – 3x20/side 🔄</li>
+                            <li><em>(Finish: 10 min rowing 🚣‍♂️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 5️⃣ (Friday): Arms (Hypertrophy)</h4>
+                        <ul class="workout-exercises">
+                            <li>Close-Grip Bench – 3x10-12 🏋️‍♂️</li>
+                            <li>EZ Bar Curls – 3x10-12 💪</li>
+                            <li>Triceps Rope Pushdown – 3x12-15 🦾</li>
+                            <li>Preacher Curls – 3x12 🔥</li>
+                            <li><em>(Superset biceps/triceps for pump! 💥)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 6️⃣ (Saturday): Legs (Hamstrings/Glutes) + HIIT</h4>
+                        <ul class="workout-exercises">
+                            <li>Romanian Deadlifts – 4x8 🏋️‍♀️</li>
+                            <li>Hip Thrusts – 3x10-12 🍑</li>
+                            <li>Leg Curls – 3x12-15 🦵</li>
+                            <li>Farmer's Walk – 3x30 sec 🚶‍♂️</li>
+                            <li><strong>HIIT Finisher:</strong><br>
+                            30 sec Sprint / 30 sec Walk – 8 rounds ⚡</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="workout-img">
+                    <img src="https://i.pinimg.com/474x/7a/1f/02/7a1f0261de4715fd78874ac0d42d55b1.jpg" alt="Gym Workout">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calisthenics Workout Section -->
+    <section class="diet">
+        <div class="container">
+            <h2>Calisthenics Workout Routine</h2>
+            <div class="diet-container">
+                <div class="diet-img">
+                    <img src="https://i.pinimg.com/736x/f4/81/51/f48151613d6c1b329c50e38ea78693f0.jpg" alt="Calisthenics Workout">
+                </div>
+                <div class="diet-content">
+                    <h3>🏋️‍♂️ 6-Day Calisthenics Plan</h3>
+                    <p><strong>Goal:</strong> Build strength 💪, muscle 🏋️‍♂️, and mobility 🧘‍♂️<br>
+                    <strong>Rest Day:</strong> Sunday (active recovery: yoga/stretching) 🧘‍♀️</p>
+                    
+                    <div class="workout-day">
+                        <h4>Day 1️⃣ (Monday): Upper Body Push</h4>
+                        <ul class="workout-exercises">
+                            <li>Push-Ups – 4x12-15 🏋️‍♂️ (slow, full range)</li>
+                            <li>Pike Push-Ups – 3x8-10 ✋ (shoulder focus)</li>
+                            <li>Dips (Parallel Bars/Chair) – 3x8-10 🔄</li>
+                            <li>Handstand Holds – 3x20-30 sec ⏳ (against wall)</li>
+                            <li>Triceps Extensions – 3x10-12 🦾</li>
+                            <li><em>(Finish: 5 min wrist mobility drills ✋)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 2️⃣ (Tuesday): Upper Body Pull</h4>
+                        <ul class="workout-exercises">
+                            <li>Pull-Ups – 4x6-8 🏋️‍♂️ (strict form)</li>
+                            <li>Bodyweight Rows (Table/TRX) – 3x10-12 🔄</li>
+                            <li>Archer Rows – 3x6/side 🎯 (scaled: feet on ground)</li>
+                            <li>Hanging Leg Raises – 3x12-15 🦵</li>
+                            <li>Plank to Failure – 3xMAX ⏳</li>
+                            <li><em>(Stretch: 5 min lats & biceps 🧘‍♂️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 3️⃣ (Wednesday): Legs & Core</h4>
+                        <ul class="workout-exercises">
+                            <li>Pistol Squats – 3x5/side 🦵 (assisted if needed)</li>
+                            <li>Jump Squats – 3x12-15 ⚡</li>
+                            <li>Nordic Hamstring Curls – 3x6-8 🏋️‍♀️ (slow negatives)</li>
+                            <li>L-Sit Holds – 3x15-20 sec ⏳ (tucked if advanced)</li>
+                            <li>Dragon Flags – 3x6-8 🐉 (scaled: negatives)</li>
+                            <li><em>(Cool down: 5 min hip stretches 🧘‍♀️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 4️⃣ (Thursday): Skill & Mobility</h4>
+                        <ul class="workout-exercises">
+                            <li>Handstand Practice – 10 min ✋ (wall holds/kicks)</li>
+                            <li>Front Lever Progressions – 3x8-10 sec 🏋️‍♂️ (tuck/adv. tuck)</li>
+                            <li>Planche Lean Holds – 3x20-30 sec ⏳</li>
+                            <li>Skin the Cat – 3x5 🔄 (shoulder mobility)</li>
+                            <li>Bridge Holds – 3x20 sec 🌉</li>
+                            <li><em>(Focus: Form over reps! 👀)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 5️⃣ (Friday): Full Body HIIT</h4>
+                        <ul class="workout-exercises">
+                            <li>Burpees – 4x10 ⚡</li>
+                            <li>Mountain Climbers – 3x20/side 🏔️</li>
+                            <li>Explosive Push-Ups – 3x8 💥</li>
+                            <li>Jump Lunges – 3x12/side 🦵</li>
+                            <li>Plank Jacks – 3x30 sec ⏳</li>
+                            <li><em>(Finisher: 5 min jump rope 🏃‍♂️)</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="workout-day">
+                        <h4>Day 6️⃣ (Saturday): Freestyle & Play</h4>
+                        <ul class="workout-exercises">
+                            <li>Muscle-Up Progressions – 10 min 🏋️‍♂️</li>
+                            <li>Human Flag Practice – 3x5 sec/side 🚩</li>
+                            <li>Handstand Walks – 3x10 steps 🚶‍♂️</li>
+                            <li>Parkour Basics – Vaults/Rolling 🏃‍♂️</li>
+                            <li><em>(Have fun! 😄)</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location">
+        <div class="container">
+            <h2>Our Location</h2>
+            <div class="location-container">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.570712666092!2d79.07413837515436!3d21.07967418058246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf1b58fb6519%3A0x6cbe7ba3e9ac2854!2sLakudkar&#39;s%20Fitness%20Gym!5e1!3m2!1sen!2sin!4v1743186760740!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3>Visit Us</h3>
+                    <p>Lakudkar Gym is conveniently located in the heart of the city with easy access to public transportation and ample parking space.</p>
+                    
+                    <h3>Parking Information</h3>
+                    <p>We have dedicated parking spaces for our members. Additional street parking is also available.</p>
+                    
+                    <h3>Operating Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Monday - Saturday</td>
+                            <td>6:00 AM - 10:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/riteshrathod016@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I'm Interested In</label>
+                            <select id="interest" name="interest">
+                                <option value="gym">Gym Membership</option>
+                                <option value="dance">Dance/Zumba Classes</option>
+                                <option value="calisthenics">Calisthenics Training</option>
+                                <option value="personal">Personal Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91 9876543210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>info@lakudkargym.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Address</h3>
+                            <p>123 Fitness Street, Nagpur, Maharashtra 440001</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <h3>Hours</h3>
+                            <p>Monday-Saturday: 6AM-10PM<br>
+                            Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="https://media-hosting.imagekit.io/c1ab74a3f47f431f/gym%20logo.jpg" alt="Lakudkar Gym Logo">
+                        <span>Lakudkar Gym</span>
+                    </div>
+                    <p>Transform your body and mind with our expert training programs and supportive community.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#membership">Membership Plans</a></li>
+                        <li><a href="#gym">Gym Training</a></li>
+                        <li><a href="#dance">Dance Classes</a></li>
+                        <li><a href="#calisthenics">Calisthenics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Personal Training</a></li>
+                        <li><a href="#">Group Classes</a></li>
+                        <li><a href="#">Nutrition Plans</a></li>
+                        <li><a href="#">Body Analysis</a></li>
+                        <li><a href="#">Special Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new classes, special offers and fitness tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Lakudkar Gym. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const formAction = this.getAttribute('action');
+                
+                fetch(formAction, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Thank you for your message! We will get back to you soon.');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    alert('There was a problem sending your message. Please try again later.');
+                    console.error('Error:', error);
+                });
+            });
+        }
+        
+        // Sticky header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.5)';
+            }
+        });
+    </script>
+</body>
+</html>
