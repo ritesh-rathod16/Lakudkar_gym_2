@@ -17,6 +17,23 @@
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+            background-image: url('https://i.pinimg.com/736x/de/8f/57/de8f579651b2e0a6cddbd359182f95ad.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
         
         .container {
@@ -67,6 +84,10 @@
         
         .section {
             padding: 60px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .section-title {
@@ -87,7 +108,7 @@
         
         /* Header Styles */
         header {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             position: fixed;
             width: 100%;
             top: 0;
@@ -139,7 +160,7 @@
         
         /* Hero Section */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/de/8f/57/de8f579651b2e0a6cddbd359182f95ad.jpg');
+            background-color: rgba(0, 0, 0, 0.5);
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -167,10 +188,6 @@
         }
         
         /* About Section */
-        .about {
-            background-color: white;
-        }
-        
         .about-content {
             display: flex;
             align-items: center;
@@ -195,10 +212,6 @@
         }
         
         /* Services Section */
-        .services {
-            background-color: #f9f9f9;
-        }
-        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -245,10 +258,6 @@
         }
         
         /* Membership Plans */
-        .membership {
-            background-color: white;
-        }
-        
         .plans-container {
             display: flex;
             flex-wrap: wrap;
@@ -308,10 +317,6 @@
         }
         
         /* Diet Plan Section */
-        .diet-plan {
-            background-color: #f9f9f9;
-        }
-        
         .diet-container {
             display: flex;
             flex-wrap: wrap;
@@ -341,10 +346,6 @@
         }
         
         /* Workout Routine */
-        .workout {
-            background-color: white;
-        }
-        
         .workout-container {
             display: flex;
             flex-wrap: wrap-reverse;
@@ -386,10 +387,6 @@
         }
         
         /* Location Section */
-        .location {
-            background-color: #f9f9f9;
-        }
-        
         .map-container {
             margin-top: 40px;
             border-radius: 10px;
@@ -436,10 +433,6 @@
         }
         
         /* Contact Section */
-        .contact {
-            background-color: white;
-        }
-        
         .contact-container {
             display: flex;
             flex-wrap: wrap;
@@ -520,9 +513,13 @@
         
         /* Footer */
         footer {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 50px 0 20px;
+            position: sticky;
+            bottom: 0;
+            z-index: 100;
+            margin-top: auto;
         }
         
         .footer-container {
@@ -685,9 +682,10 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about">
-        <div class="container">
+    <!-- Main Content -->
+    <main class="container">
+        <!-- About Section -->
+        <section class="section about">
             <div class="about-content">
                 <div class="about-text">
                     <h2>Welcome to Lakudkar Gym</h2>
@@ -699,12 +697,10 @@
                     <img src="https://i.pinimg.com/736x/f5/51/48/f55148ad2ef92de8597008b60bcd29a8.jpg" alt="Gym Interior">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="section services">
-        <div class="container">
+        <!-- Services Section -->
+        <section class="section services">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -735,12 +731,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Membership Plans -->
-    <section class="section membership" id="membership">
-        <div class="container">
+        <!-- Membership Plans -->
+        <section class="section membership" id="membership">
             <h2 class="section-title">Membership Plans</h2>
             <div class="plans-container">
                 <div class="plan-card">
@@ -783,12 +777,10 @@
                     <a href="#contact" class="btn">Join Now</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Diet Plan Section -->
-    <section class="section diet-plan">
-        <div class="container">
+        <!-- Diet Plan Section -->
+        <section class="section diet-plan">
             <h2 class="section-title">Diet Plan</h2>
             <div class="diet-container">
                 <div class="diet-image">
@@ -815,12 +807,10 @@
                     🌙 Dinner: Jowar Roti 🫓 + Palak Paneer 🧀 + Sprouts 🌱</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Workout Routine -->
-    <section class="section workout">
-        <div class="container">
+        <!-- Workout Routine -->
+        <section class="section workout">
             <h2 class="section-title">Daily Routine Workout</h2>
             <div class="workout-container">
                 <div class="workout-text">
@@ -834,7 +824,7 @@
                     Cable Flys – 3x12 ✨<br>
                     Triceps Dips – 3xMAX 💪<br>
                     Skull Crushers – 3x10-12 🦾<br>
-                    (Finish: 10 min incline treadmill walk �‍♂️)</p>
+                    (Finish: 10 min incline treadmill walk 🚶‍♂️)</p>
                     
                     <p><strong>Day 2️⃣ (Tuesday): Back & Biceps</strong><br>
                     Pull-Ups – 4x6-8 (add weight if advanced) 🏋️‍♂️<br>
@@ -875,12 +865,10 @@
                     (Stretch: 5 min lats & biceps 🧘‍♂️)</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Location Section -->
-    <section class="section location" id="location">
-        <div class="container">
+        <!-- Location Section -->
+        <section class="section location" id="location">
             <h2 class="section-title">Our Location</h2>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.570712666092!2d79.07413837515436!3d21.07967418058246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bf1b58fb6519%3A0x6cbe7ba3e9ac2854!2sLakudkar&#39;s%20Fitness%20Gym!5e1!3m2!1sen!2sin!4v1743186760740!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -911,12 +899,10 @@
                 <img src="https://tse1.mm.bing.net/th?id=OIP.Oke_TneWMJ1b0_M4kWrSKwHaFj&pid=Api&P=0&h=180" alt="Parking Available" style="max-width: 100%; border-radius: 10px;">
                 <p style="margin-top: 15px;"><strong>Ample Parking Space Available</strong></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-container">
                 <div class="contact-form">
@@ -979,8 +965,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
